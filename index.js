@@ -25,5 +25,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => console.log(`🚀 Backend running on port ${PORT}`));
+const PORT = process.env.PORT || 10000; // Use Render's port or 10000
+server.listen(PORT, () => {
+  console.log(`🚀 Backend running on port ${PORT}`);
+});
