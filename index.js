@@ -9,9 +9,10 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    // Replace the second URL with your actual Vercel URL once you have it
-    origin: ["http://localhost:5173", "https://kench001-feasify.vercel.app"],
+    // Setting origin to "*" is the "Master Key"—it allows all websites to connect.
+    origin: "*",
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 
